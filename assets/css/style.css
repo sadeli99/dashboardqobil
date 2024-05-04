@@ -1,4 +1,4 @@
-   .html, body {
+.html, body {
     height: 100%;
     padding-bottom: 100px;
     }
@@ -18,26 +18,28 @@
     }
     
     .sidebar-text {
-    font-size: 1.2em; /* Atur ukuran font menjadi 1em */
+    font-size: 1em; /* Atur ukuran font menjadi 1em */
 font-family: myfontsubtitle3;
     font-weight: 700;
     color: #fff;
+    
     }
     
     .sidebar-text-gray {
-    font-size: 1.2em; /* Atur ukuran font menjadi 1em */
+    font-size: 1em; /* Atur ukuran font menjadi 1em */
     font-family: myfontsubtitle3;
     font-weight: 500;
     color: #64748B;
     
+    
     }
     .sidebar-icon {
-    font-size: 1.4em; /* Ikon menyesuaikan dengan ukuran font */
+    font-size: 1.2em; /* Ikon menyesuaikan dengan ukuran font */
     color: #fff;
     }
     
     .sidebar-icon-gray {
-    font-size: 1.4em; /* Ikon menyesuaikan dengan ukuran font */
+    font-size: 1.2em; /* Ikon menyesuaikan dengan ukuran font */
     color: #9AA8BC;
     }
     
@@ -48,6 +50,8 @@ font-family: myfontsubtitle3;
     font-weight: 800;
     
     }
+    
+    
     
     .hideng {
     color: #2D3239;
@@ -68,6 +72,13 @@ font-family: myfontsubtitle3;
     background-color: #00ADEF; /* Green */
     border: none;
     color: #fff;
+    }
+    
+    .buled {
+    background-color: #00ADEF; /* Green */
+    border: none;
+    color: #fff;
+    border-radius: 50%;
     }
     
     .mgs  {
@@ -117,13 +128,15 @@ font-family: myfontsubtitle3;
     padding: 5px 10px;
     border-radius: 5px;
     margin-left: 10px;
+    
     }
     
     .default-bg {
-    background-color: lightgray;
+    background-color: #9AA8BC;
     padding: 5px 10px;
     border-radius: 5px;
     margin-left: 10px;
+    color: white;
     }
     
     .nav-item-bg {
@@ -160,7 +173,7 @@ font-family: myfontsubtitle3;
     border-radius: 10%;  /* Bentuk bulat */
     color: white;   /* Warna teks */
      /* Padding untuk tombol */
-    font-size: 16px; /* Ukuran font */
+    font-size: 90px; /* Ukuran font */
     text-align: center;
     display: flex;  /* Menampilkan ikon dan teks secara horisontal */
     align-items: center;  /* Menyelaraskan ikon dan teks secara vertikal */
