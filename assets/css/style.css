@@ -1,0 +1,422 @@
+   .html, body {
+    height: 100%;
+    padding-bottom: 100px;
+    }
+    
+    .profile-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover; /* Memastikan gambar dipotong */
+      border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    }
+    
+    .cards-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Memastikan gambar dipotong */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    }
+    
+    
+    /* sidebar */
+    
+    
+    /* Gaya untuk sidebar offcanvas */
+    .offcanvas {
+    background-color: #fff; /* Warna latar belakang sidebar */
+    color: #64748B; /* Warna teks */
+    font-family: myfontsubtitle3;
+    font-weight: 500;
+    }
+    
+    .offcanvas .nav-link {
+    color: #64748B; /* Warna teks */
+    padding: 15px 10px; /* Jarak antar item */
+    transition: background-color 0.3s; /* Transisi untuk hover */
+    font-size: 17px; /* Ukuran teks yang lebih besar */
+    text-align: left; /* Rata kiri */
+    }
+    
+    .offcanvas .nav-link .bi {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    transform: scale(0.9); /* Memperbesar ikon */
+    }
+    
+    .offcanvas .nav-link:hover,
+    .offcanvas .nav-link.active {
+    background-color: #00ADEF; /* Warna latar belakang saat hover atau item aktif */
+    color: white;
+    border-radius: 10px;
+    }
+    
+    .offcanvas ul.nav {
+    margin-top: 20px; /* Jarak dari atas */
+    }
+    
+    .offcanvas ul.nav li {
+    margin-bottom: 20px; /* Jarak antar elemen li */
+    }
+    
+    /* Penataan gambar logo */
+    .offcanvas-header img {
+    max-width: 100px; /* Ukuran maksimum untuk logo */
+    }
+    
+    /* Penataan card di bagian bawah sidebar */
+    .card-sidebar {
+    background-color: #00ADEF; /* Warna latar belakang card */
+    color: #343a40; /* Warna teks dalam card */
+    text-align: center; /* Rata tengah */
+    }
+    
+    .card-body-sidebar {
+    padding: 10px; /* Padding dalam card */
+    }
+    
+    .sidebar-card-button {
+    width: 100%; /* Lebar tombol selebar card */
+    }
+   
+    .title {
+    font-family: myfontsubtitle2;
+    font-weight: 800;
+    
+    }
+    
+    
+    
+    .hideng {
+    color: #2D3239;
+    }
+    
+    .hideng-50 {
+    color: #64748B;
+    
+    }
+    
+    .subtitle {
+    font-family: myfontsubtitle3;
+    font-weight: 400;
+    
+    }
+    
+    .bg {
+    background-color: #00ADEF; /* Green */
+    border: none;
+    color: #fff;
+    }
+    
+    .bg-toast {
+    background-color: #00ADEF; /* Green */
+    border: none;
+    color: #fff;
+    }
+    
+    .buled {
+    background-color: #00ADEF; /* Green */
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    }
+    
+    .mgs  {
+    margin-top: 40%;
+    }
+    
+    /* Tambahkan CSS untuk mengatur tinggi input dan tombol */
+    .input-50 {
+    height: 50px;
+    }
+    
+    .bg-button {
+    background-color: #00ADEF; /* Green */
+    border: none;
+    color: #fff;
+    }
+    
+    .bg-und {
+    background-color: white; /* Green */
+    border: none;
+    color: #00ADEF;
+    width: 100%;
+    font-size: 15px;
+    }
+    
+    .bg-und i {
+    font-size: 10px;
+   
+    }
+    
+   
+    
+    
+    /* css tamu */
+    
+    .text-truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    }
+    
+    .kehadiran {
+    padding: 0 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    }
+    
+    .hadir {
+    background-color: #28a745; /* Hijau untuk "Hadir" */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    }
+    
+    .berhalangan {
+    background-color: #dc3545; /* Merah untuk "Berhalangan" */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    
+    }
+    
+    .default-bg {
+    background-color: #F5811E;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+    }
+    
+   
+    
+    .floating-button {
+    position: fixed;
+    bottom: 20px;  /* Jarak dari bawah */
+    right: 30px;   /* Jarak dari kiri */
+    background-color: blue; /* Warna background */  width: 50px;
+    height: 50px;
+    border-radius: 10%;  /* Bentuk bulat */
+    color: white;   /* Warna teks */
+     /* Padding untuk tombol */
+    font-size: 90px; /* Ukuran font */
+    text-align: center;
+    display: flex;  /* Menampilkan ikon dan teks secara horisontal */
+    align-items: center;  /* Menyelaraskan ikon dan teks secara vertikal */
+    
+    z-index: 100;
+    }
+    
+    .floating-button .icon {
+    text-align: center; /* Jarak antara ikon dan teks */
+    }
+    
+    .center-load {
+    height: 60vh; /* Memenuhi seluruh tinggi viewport */
+    display: flex; /* Mengaktifkan layout fleksibel */
+    justify-content: center; /* Menjaga elemen tetap di tengah secara horizontal */
+    align-items: center; /* Menjaga elemen tetap di tengah secara vertikal */
+    }
+    
+    .kosong {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    
+    /* icons */
+    
+    .icon-blue {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 173, 239, 0.1);
+    border-radius: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .icon-blue i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: #00ADEF;    
+    }
+    
+    .icon-oren {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(245, 129, 30, 0.1);
+    border-radius: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .icon-oren i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: #F5811E;    
+    }
+    
+    .icon-hijau {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(149, 201, 65, 0.1);
+    border-radius: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .icon-hijau i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: #95C941;    
+    }
+    
+    .icon-merah {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(236, 5, 63, 0.1);
+    border-radius: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .icon-merah i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: #EC053F;    
+    }
+    
+    
+    .image-with-text {
+    display: flex; /* Mengatur konten sejajar secara horizontal */
+    align-items: center; /* Menjaga gambar dan teks sejajar secara vertikal */
+    }
+    .image-with-text img {
+    width: 20px; /* Mengatur ukuran lebar gambar */
+    height: 20px; /* Mengatur ukuran tinggi gambar */
+    margin-right: 20px; /* Memberikan jarak antara gambar dan teks */
+    }
+    
+    
+    
+    
+    /* Media query untuk menyembunyikan sidebar di perangkat mobile dan tablet */
+    @media (max-width: 768px) {
+    #sidebar {
+    display: none;
+    }
+    
+    .main-content {
+    margin: 0px 15px;
+    padding-top: 180px;
+    }
+    }
+    
+    /* Media query untuk menampilkan sidebar di perangkat desktop */
+    @media (min-width: 769px) {
+    
+    /*
+    body {
+    display: flex;
+    }
+    */
+    
+    .navbar {
+    position: fixed; /* Tetap di tempat */
+    left: 300px; /* Berada di samping sidebar */
+    top: 0; /* Berada di bagian atas */
+    width: auto; /* Lebar navbar menyesuaikan sisa ruang */
+    z-index: 2; /* Pastikan navbar berada di depan */
+    }
+    
+    #sidebar {
+    display: block;
+    width: 300px;
+    position: fixed;
+    height: 100vh;
+    }
+    
+    .main-content {
+    margin-left: 400px;
+    margin-right: 80px;
+    padding-top: 190px;
+    
+    }
+    
+    
+    .card-height {
+    height: 210px; /* Anda bisa menyesuaikan ketinggian ini sesuai kebutuhan */
+    }
+    
+    
+    /* sidebar */
+    
+    /* Gaya untuk sidebar offcanvas */
+    #sidebar {
+    background-color: #fff; /* Warna latar belakang sidebar */
+    color: #64748B; /* Warna teks */
+    font-family: myfontsubtitle3;
+    font-weight: 500;
+    }
+    
+    #sidebar .nav-link {
+    color: #64748B; /* Warna teks */
+    padding: 15px 10px; /* Jarak antar item */
+    transition: background-color 0.3s; /* Transisi untuk hover */
+    font-size: 17px; /* Ukuran teks yang lebih besar */
+    text-align: left; /* Rata kiri */
+    }
+    
+    #sidebar .nav-link .bi {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    transform: scale(0.9); /* Memperbesar ikon */
+    }
+    
+    #sidebar .nav-link:hover,
+    #sidebar .nav-link.active {
+    background-color: #00ADEF; /* Warna latar belakang saat hover atau item aktif */
+    color: white;
+    border-radius: 10px;
+    }
+    
+    #sidebar ul.nav {
+    margin-top: 20px; /* Jarak dari atas */
+    }
+    
+    #sidebar ul.nav li {
+    margin-bottom: 20px; /* Jarak antar elemen li */
+    }
+    
+    /* Penataan gambar logo */
+    #sidebar img {
+    max-width: 100px; /* Ukuran maksimum untuk logo */
+    }
+    
+    /* Penataan card di bagian bawah sidebar */
+    #sidebar .card-sidebar {
+    background-color: #00ADEF; /* Warna latar belakang card */
+    color: #343a40; /* Warna teks dalam card */
+    text-align: center; /* Rata tengah */
+    }
+    
+    #sidebar .card-body-sidebar {
+    padding: 10px; /* Padding dalam card */
+    }
+    
+    #sidebar .sidebar-card-button {
+    width: 100%; /* Lebar tombol selebar card */
+    }
+    
+    
+    
+    }
