@@ -1,0 +1,188 @@
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png" />
+  <title>Dashboard pengantin - undangan qobilto</title>
+  <meta name="title" content="Dashboard tamu undangan qobilto">
+  <meta classname="meta-description" name="description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dashboard tamu undangan qobilto">
+  <meta classname="meta-description" property="og:description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+  <meta property="twitter:title" content="Dashboard tamu undangan qobilto">
+  <meta classname="meta-description" property="twitter:description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+  <meta name="author" content="QOBILTO">
+  
+  <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4=" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    
+    @font-face {
+    font-family: myfontsubtitle1;
+    src: url(assets/fonts/asphalt_maison_neue_bold.ttf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: myfontsubtitle2;
+    src: url(assets/fonts/asphalt_maison_neue_demi.ttf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: myfontsubtitle3;
+    src: url(assets/fonts/asphalt_maison_neue_book.ttf) format('truetype');
+    }
+    
+  </style>
+    
+  
+  </style>
+</head>
+<body>
+    
+    <div id="sidebar" class="bg-light" style="padding:  40px;">
+    <div class="text-left">
+    <img src="https://qobilto.my.id/assets/images/logo.png" alt="Logo" class="img-fluid">
+    <button type="button" class="btn-close text-reset d-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <ul class="nav flex-column" style="margin-top: 110px;">
+    <li class="nav-item">
+    <a href="dashboard.html" class="nav-link">
+    <i data-feather="grid" class="bi"></i> Dashboard
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="sebar.html" class="nav-link">
+    <i data-feather="user-plus" class="bi"></i> Sebar tamu
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#ucapan" class="nav-link active">
+    <i data-feather="message-square" class="bi"></i> Ucapan
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="profile.html" class="nav-link">
+    <i data-feather="user" class="bi"></i> profile
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="login.html" onclick="logout()" class="nav-link">
+    <i data-feather="log-out" class="bi"></i> Keluar
+    </a>
+    </li>
+    </ul>
+    
+    </div>
+    
+    <!-- Navbar / Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid p-6">
+    <!-- Icon menu untuk offcanvas (sidebar) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Gambar profil -->
+    <div class="d-flex align-items-center ms-auto">
+    <img id="profileImage" class="profile-image" src="https://raw.githubusercontent.com/gavinhawaari/lalazo/main/images (1).jpeg" alt="Profile Image">
+    </div>
+    </div>
+    </nav>
+    
+    <!-- Sidebar offcanvas -->
+    <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header p-4 mt-2 text-center">
+    <img src="https://qobilto.my.id/assets/images/logo.png" alt="Logo" class="img-fluid mx-3">
+    <button type="button" class="btn-close text-reset d-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body d-flex flex-column">
+    <ul class="nav flex-column">
+    <li class="nav-item">
+    <a href="dashboard.html" class="nav-link">
+    <i data-feather="grid" class="bi"></i> Dashboard
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="sebar.html" class="nav-link">
+    <i data-feather="user-plus" class="bi"></i> Sebar tamu
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#ucapan" class="nav-link active">
+    <i data-feather="message-square" class="bi"></i> Ucapan
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="profile.html" class="nav-link">
+    <i data-feather="user" class="bi"></i> profile
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="login.html" onclick="logout()" class="nav-link">
+    <i data-feather="log-out" class="bi"></i> Keluar
+    </a>
+    </li>
+    </ul>
+    
+    <!-- Card di bagian paling bawah sidebar -->
+    <div class="card-sidebar mt-auto rounded-3">
+    <div class="card-body-sidebar">
+    <p>Informasi Tambahan</p>
+    <button class="btn btn-primary sidebar-card-button">Klik Saya</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="main-content">
+    
+
+   
+    <div style="display: none;">
+    <h1>Jumlah Total Tamu: <span id="totalGuests">0</span></h1>
+    <div id="guestLink">Memuat...</div>
+    </div>
+    
+    
+    
+    <div class="center-load" id="loading">
+    <!-- Spinner Bootstrap -->
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+    <span class="visually-hidden">Memuat...</span>
+    </div>
+    </div>
+    
+    <section>
+    <div class="container">
+    
+    <div id="noDataMessage" style="display: none; text-align: center;">
+        <!-- Pesan jika tidak ada data RSVP -->
+        <img src="image-path-here.jpg" alt="Tidak ada ucapan" style="max-width: 200px;"/>
+        <h1>Maaf, belum ada ucapan atau doa dari tamu</h1>
+    </div>
+   
+    <h2 class="mb-8 title" id="titles" style="display: none;">Ucapan dari tamu</h2>
+    <div class="row" id="rsvpData" style="display: none;">
+    </div>
+
+     </div>
+     </section>
+     
+     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script src="js/ucapan.js"></script>
+    <script>
+    feather.replace();
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png" />
+    <title>Dashboard pengantin - undangan qobilto</title>
+    <meta name="title" content="Dashboard tamu undangan qobilto">
+    <meta classname="meta-description" name="description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dashboard tamu undangan qobilto">
+    <meta classname="meta-description" property="og:description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+    <meta property="twitter:title" content="Dashboard tamu undangan qobilto">
+    <meta classname="meta-description" property="twitter:description" content="Pantau undangan dgital kamu dimana saja kapan saja">
+    <meta name="author" content="QOBILTO">
+    
+    <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" integrity="sha256-V6lu+OdYNKTKTsVFBuQsyIlDiRWiOmtC8VQ8Lzdm2i4=" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+    
+    @font-face {
+    font-family: myfontsubtitle1;
+    src: url(assets/fonts/asphalt_maison_neue_bold.ttf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: myfontsubtitle2;
+    src: url(assets/fonts/asphalt_maison_neue_demi.ttf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: myfontsubtitle3;
+    src: url(assets/fonts/asphalt_maison_neue_book.ttf) format('truetype');
+    }
+    
+    .floating-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    background-color: #00ADEF; /* Hijau bootstrap */
+    color: white;
+    text-align: center;
+    border-radius: 30px; /* Radius 30px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
+    padding: 15px 25px; /* Padding untuk jarak */    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 18px;
+    }
+    .floating-btn .icon {
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    
+    }
+    
+    .orange {
+    background-color: #F5811E;
+    color: white;
+    }
+    
+    .blue {
+    background-color: #00ADEF;
+    color: white;
+    }
+    
+    </style>
+    
+</head>
+<body>
+
+    <!-- Sidebar untuk desktop -->
+    
+    <div id="sidebar" class="bg-light" style="padding:  40px;">
+    <div class="text-left">
+    <img src="https://qobilto.my.id/assets/images/logo.png" alt="Logo" class="img-fluid">
+    <button type="button" class="btn-close text-reset d-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <ul class="nav flex-column" style="margin-top: 110px;">
+    <li class="nav-item">
+    <a href="dashboard.html" class="nav-link">
+    <i data-feather="grid" class="bi"></i> Dashboard
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="#sebar" class="nav-link active">
+    <i data-feather="user-plus" class="bi"></i> Sebar tamu
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="ucapan.html" class="nav-link">
+    <i data-feather="message-square" class="bi"></i> Ucapan
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="profile.html" class="nav-link">
+    <i data-feather="user" class="bi"></i> profile
+    </a>
+    </li>
+    <li class="nav-item">
+    <a href="login.html" onclick="logout()" class="nav-link">
+    <i data-feather="log-out" class="bi"></i> Keluar
+    </a>
+    </li>
+    </ul>
+    
+    </div>
+
+    <!-- Navbar / Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid p-6">
+    <!-- Icon menu untuk offcanvas (sidebar) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Gambar profil -->
+    <div class="d-flex align-items-center ms-auto">
+    <img id="profileImage" class="profile-image" src="https://raw.githubusercontent.com/gavinhawaari/lalazo/main/images (1).jpeg" alt="Profile Image">
+    </div>
+    </div>
+    </nav>
+
+     <!-- Sidebar offcanvas -->
+     <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+     <div class="offcanvas-header p-4 mt-2 text-center">
+     <img src="https://qobilto.my.id/assets/images/logo.png" alt="Logo" class="img-fluid mx-3">
+     <button type="button" class="btn-close text-reset d-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     </div>
+     
+     <div class="offcanvas-body d-flex flex-column">
+     <ul class="nav flex-column">
+     <li class="nav-item">
+     <a href="dashboard.html" class="nav-link">
+     <i data-feather="grid" class="bi"></i> Dashboard
+     </a>
+     </li>
+     <li class="nav-item">
+     <a href="#sebar" class="nav-link active">
+     <i data-feather="user-plus" class="bi"></i> Sebar tamu
+     </a>
+     </li>
+     <li class="nav-item">
+     <a href="ucapan.html" class="nav-link">
+     <i data-feather="message-square" class="bi"></i> Ucapan
+     </a>
+     </li>
+     <li class="nav-item">
+     <a href="profile.html" class="nav-link">
+     <i data-feather="user" class="bi"></i> profile
+     </a>
+     </li>
+     <li class="nav-item">
+     <a href="login.html" onclick="logout()" class="nav-link">
+     <i data-feather="log-out" class="bi"></i> Keluar
+     </a>
+     </li>
+     </ul>
+     
+     <!-- Card di bagian paling bawah sidebar -->
+     <div class="card-sidebar mt-auto rounded-3">
+     <div class="card-body-sidebar">
+     <p>Informasi Tambahan</p>
+     <button class="btn btn-primary sidebar-card-button">Klik Saya</button>
+     </div>
+     </div>
+     </div>
+     </div>
+    
+  <div class="main-content">
+
+    <!-- Modal fullscreen -->
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+    <div class="modal-header px-6 pt-9">
+    <h5 class="modal-title title" id="exampleModalLabel">Buat tamu undangan</h5>
+    <button type="button" class="btn-close mx-1" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="modal-body px-6 p-5">
+    <form id="guestForm" onsubmit="return addGuest(event)">
+    <!-- Template pesan -->
+    <div class="form-floating">
+    <textarea class="form-control my-4 title px-4 rounded-3" id="templatePesan" style="height: 300px" readonly></textarea>
+    <label for="floatingTextarea" class="hideng-50 subtitle px-4 my-3">Template pesan</label>
+    </div>
+    
+    <!-- Input nama tamu -->
+    <div class="form-floating mb-3 mt-4">
+    <input type="text" class="form-control title px-4 rounded-3" id="namaTamu" placeholder="Masukkan nama Anda" oninput="updateTemplate()" style="height: 70px;">
+    <label for="namaTamu" class="hideng-50 subtitle px-4 my-2">Nama Tamu</label>
+    </div>
+    
+    <!-- Input URL acara -->
+    <div class="form-floating mb-3 mt-4">
+    <input type="text" class="form-control title px-4 rounded-3" id="urlAcara" style="height: 70px;" readonly>
+    <label for="urlAcara" class="floatingTextarea2 hideng-50 subtitle px-4 my-2">Tautan undangan kamu</label>
+    </div>
+    
+    </div>
+    <div class="modal-footer border-opacity-10 px-5">
+    <button id="submitBtn" type="submit" class="btn blue px-8 py-5 rounded-3">Simpan Tamu</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    
+    
+    <!-- Floating Button -->
+    <div class="floating-btn title" data-bs-toggle="modal" data-bs-target="#fullscreenModal">
+    <span class="icon">&#43;</span> <!-- Karakter + sebagai ikon -->
+    Tambah Tamu
+    </div>
+    
+    <section>
+    <div class="center-load" id="loading">
+    <!-- Spinner Bootstrap -->
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+    <span class="visually-hidden">Memuat...</span>
+    </div>
+    </div>
+    </section>
+    
+    <section  id="noDataMessage" style="display: none;">
+    <div class="kosong mx-3">
+    <div>
+    <img src="https://cdn-icons-png.flaticon.com/512/4905/4905986.png" alt="Tidak ada ucapan" style="max-width: 200px;"/>
+    <h1 class="mx-5 mt-8 title hideng">Maaf, belum ada ucapan atau doa dari tamu</h1>
+     <p class="hideng-50 subtitle">Buku tamu masih kosong</p>
+    </div>
+    </div>
+    </section>
+    
+     
+    
+    <section id="daftartamu" style="display: none">
+    <div class="container">
+        <h2 class="mb-8 title">Daftar tamu</h2>
+        <div class="row" id="guestCardList">
+        <!-- Daftar card akan ditambahkan di sini -->
+        </div>
+     </div>
+    </section>
+   
+   
+    
+    
+  
+   
+    
+    
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed top-0 start-0 p-5">
+        <div class="toast" id="notificationToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+        <div class="d-flex gap-4">
+        <span><i class="fa-solid fa-circle-check fa-lg icon-success"></i></span>
+        <div class="d-flex flex-column flex-grow-1 gap-2">
+        <div class="d-flex align-items-center">
+        <span class="fw-semibold">Notifikasi</span>
+        <button type="button" class="btn-close btn-close-sm ms-auto" data-bs-dismiss="toast"
+        aria-label="Close"></button>
+        </div>
+        <span id="toastMessage">I will auto dismiss after 8 seconds.</span>
+        </div>
+        </div>
+        </div>
+        
+        </div>
+    </div>
+    
+
+   </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script src="js/tambahtamulist.js"></script>
+    <script src="js/modalinput.js"></script>
+    <script>
+    feather.replace();
+    </script>
+
+</body>
+</html>
